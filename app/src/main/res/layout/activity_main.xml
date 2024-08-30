@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/prevTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/resultTV"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/backspace"
+        android:layout_width="103dp"
+        android:layout_height="3dp"
+        android:layout_marginLeft="309dp"
+        android:layout_marginRight="14dp"
+        android:layout_weight="1"
+        android:background="@drawable/back_space_background"
+        android:elevation="0dp"
+        android:text="⌫"
+        android:textColor="@color/black"
+        android:onClick="backspaceAction"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:background="@color/white"
+        style="@style/btnRow">
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="7"/>
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="8"/>
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="9"/>
+
+        <Button
+            style="@style/btnOperator"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="/"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        style="@style/btnRow">
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="4"/>
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="5"/>
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="6"/>
+
+        <Button
+            style="@style/btnOperator"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="x"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        style="@style/btnRow">
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="1"/>
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="2"/>
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="3"/>
+
+        <Button
+            style="@style/btnOperator"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="+"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        style="@style/btnRow">
+
+        <Button
+            style="@style/btnOperator"
+            android:text="C"
+            android:textColor="@color/red"
+            android:background="@drawable/button_background"
+            android:onClick="allClearActions"/>
+
+        <Button
+            style="@style/btnNum"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="0"/>
+
+        <Button
+            style="@style/btnNum"
+            android:text="="
+            android:background="@drawable/equal"
+            android:textColor="@color/black"
+            android:onClick="equalsAction"/>
+
+        <Button
+            style="@style/btnOperator"
+            android:background="@drawable/button_background"
+            android:textColor="@color/black"
+            android:text="-"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
